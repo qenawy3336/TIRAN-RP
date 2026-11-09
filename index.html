@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="ar" dir="rtl"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="الموقع الرسمي لسيرفر مصر للحياة الواقعية: التقديم والتصاريح والخدمات الحكومية والمتجر"><meta name="theme-color" content="#0a0b0e"><meta property="og:title" content="مصر للحياة الواقعية"><meta property="og:description" content="الموقع الرسمي لسيرفر مصر للحياة الواقعية">
-<title>مصر للحياة الواقعية</title>
+<meta name="description" content="الموقع الرسمي لسيرفر تيران للحياة الواقعية: التقديم والتصاريح والخدمات الحكومية والمتجر"><meta name="theme-color" content="#0a0b0e"><meta property="og:title" content="تيران للحياة الواقعية"><meta property="og:description" content="الموقع الرسمي لسيرفر تيران للحياة الواقعية">
+<title>تيران للحياة الواقعية</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap">
 <style>
 :root{--p:#e11d2e;--bg:#f7f7f8;--card:#fff;--tx:#0f1115;--mut:#5f6670;--bd:#e3e5e9;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -84,13 +84,13 @@ table{display:block;overflow-x:auto;white-space:nowrap}
 #t{width:90%;text-align:center;bottom:16px}
 }
 </style></head><body>
-<div class="gv"><span>بوابة مصر للحياة الواقعية الإلكترونية · الخدمات الحكومية</span><span id="dt"></span></div>
+<div class="gv"><span>بوابة تيران للحياة الواقعية الإلكترونية · الخدمات الحكومية</span><span id="dt"></span></div>
 <div class="gov"><span>البوابة الرسمية لحكومة <b id="gn"></b></span><span id="gd"></span></div>
 <header><b onclick="location.hash=''"><span class="lg" id="lg"></span><span id="nm"></span></b>
 <nav><a href="#" onclick="go('')">الرئيسية</a><a href="#" onclick="go('services')">الخدمات</a><a href="#" onclick="go('guide')">ابدأ هنا</a><a href="#" onclick="go('rules')">القوانين</a><a href="#" onclick="go('sectors')">القطاعات</a><a href="#" onclick="go('news')">الأخبار</a><a class="dl" target="_blank" rel="noopener">ديسكورد</a><a href="#" onclick="go('shop')">المتجر</a></nav>
 <button class="btn o" id="th" title="تبديل الثيم"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 14.5A8 8 0 019.5 4 8 8 0 1020 14.5z"/></svg></button><button class="btn o mb" id="mb" aria-label="القائمة"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button></header>
 <main id="app"></main>
-<footer><div class="fg"><div><b>البوابة الحكومية الإلكترونية</b><p>مصر للحياة الواقعية — خدمات القطاعات الحكومية في مكان واحد.</p></div><div><b>الجهات</b><a href="#police">الشرطة</a><a href="#muni">البلدية</a><a href="#shop">المتجر</a></div><div><b>روابط مهمة</b><a href="#services">الخدمات الإلكترونية</a><a href="#guide">ابدأ هنا</a><a href="#health">الصحة</a><a href="#account">حسابي</a><a class="dl" target="_blank" rel="noopener">سيرفر ديسكورد</a></div></div><div>© مصر للحياة الواقعية — جميع الحقوق محفوظة</div></footer>
+<footer><div class="fg"><div><b>البوابة الحكومية الإلكترونية</b><p>تيران للحياة الواقعية — خدمات القطاعات الحكومية في مكان واحد.</p></div><div><b>الجهات</b><a href="#police">الشرطة</a><a href="#muni">البلدية</a><a href="#shop">المتجر</a></div><div><b>روابط مهمة</b><a href="#services">الخدمات الإلكترونية</a><a href="#guide">ابدأ هنا</a><a href="#health">الصحة</a><a href="#account">حسابي</a><a class="dl" target="_blank" rel="noopener">سيرفر ديسكورد</a></div></div><div>© تيران للحياة الواقعية — جميع الحقوق محفوظة</div></footer>
 <div id="m"></div><div id="t"></div>
 <script src="config.js"></script>
 <script src="settings.js"></script>
@@ -146,7 +146,7 @@ function loadStatus(){const e=$("#st");if(!e)return;if(!CONFIG.mcServer){e.remov
  fetch("https://api.mcsrvstat.us/3/"+encodeURIComponent(CONFIG.mcServer)).then(r=>r.json()).then(s=>{const on=!!s.online,c=on?"#22c55e":"#ef4444";e.innerHTML=`<i style="background:${c};box-shadow:0 0 8px ${c}"></i>${on?"السيرفر متصل · "+(s.players?.online??0)+"/"+(s.players?.max??0)+" لاعب":"السيرفر غير متصل"}`}).catch(()=>e.remove())}
 function home(){
  document.body.className="";
- $("#app").innerHTML=`<section class="hero"><span class="pill"><i></i>سيرفر ماينكرافت للحياة الواقعية</span> <span class="pill" id="st"><i></i>حالة السيرفر…</span><h1>أهلاً بك في <span>${CONFIG.name}</span></h1><p>${CONFIG.texts?.heroText||"مجتمع ماينكرافت للحياة الواقعية بالطابع المصري. اختر دورك وابدأ قصتك داخل المدينة."}</p>
+ $("#app").innerHTML=`<section class="hero"><span class="pill"><i></i>سيرفر ماينكرافت للحياة الواقعية</span> <span class="pill" id="st"><i></i>حالة السيرفر…</span><h1>أهلاً بك في <span>${CONFIG.name}</span></h1><p>${CONFIG.texts?.heroText||"مجتمع ماينكرافت للحياة الواقعية بالطابع التيراني. اختر دورك وابدأ قصتك داخل المدينة."}</p>
  <a class="btn dc" href="${CONFIG.discord}" target="_blank" rel="noopener">دخول بديسكورد</a><button class="btn" onclick="citizen()">تقديم مواطنة / سياحة / زيارة</button><a class="btn o" href="${CONFIG.discord}" target="_blank" rel="noopener">انضم لسيرفر ديسكورد</a></section>
  ${svHTML()}<h2 id="sectors">الجهات الحكومية والقطاعات</h2><div class="grid">${CONFIG.sectors.map((s,i)=>`<div class="card sec" style="--c:${s.c}">${s.img?`<img class="pi" src="${s.img}" alt="" onerror="this.remove()">`:""}<div class="ic">${I(s.ic)}</div><h3>${s.n}</h3><p>${s.d}</p><button class="btn" onclick="sectorForm(CONFIG.sectors[${i}])">قدّم الآن</button> ${s.more?`<button class="btn o" style="border-color:${s.c};color:${s.c};background:none" onclick="go('${s.more}')">المزيد</button>`:""}</div>`).join("")}</div>
  <h2 id="rules">القوانين</h2>${CONFIG.rules.map(r=>`<details><summary>${r.t}</summary><ol>${r.l.map(x=>`<li>${x}</li>`).join("")}</ol></details>`).join("")}
