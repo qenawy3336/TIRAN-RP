@@ -1,6 +1,7 @@
 /* إعداداتك الخاصة — لا تتغير مع التحديثات */
 CONFIG.logo="logo.png";            // مثال: "logo.png"
-CONFIG.discord="https://discord.gg/eDXexQMCYD";
+CONFIG.discord="https://discord.gg/Jc3Fsa3ZSq";
+CONFIG.mcServer="";        // عنوان سيرفر ماينكرافت لعرض الحالة، مثال: "play.example.com"
 CONFIG.sbUrl="https://zdtilvwdtkokdwxhqqfw.supabase.co";
 CONFIG.sbKey="sb_publishable_WiH57FQZz2TJ6xO8aCEFgQ_SJDY-wak";
 const _demo=CONFIG.sbKey.startsWith("YOUR");
@@ -9,7 +10,7 @@ CONFIG.h=_demo?{}:{apikey:CONFIG.sbKey,Authorization:"Bearer "+CONFIG.sbKey};
 /* الأخبار والقوانين (عدّلهم براحتك) */
 Object.assign(CONFIG,{
 news:[
- {t:"افتتاح السيرفر رسميًا",d:"2026/10/30",x:"انطلاق الموسم الأول من تيران للحياة الواقعية بقطاعات جديدة وخريطة محدّثة.",img:""},
+ {t:"افتتاح السيرفر رسميًا",d:"2026/10/30",x:"انطلاق الموسم الأول من مصر للحياة الواقعية بقطاعات جديدة وخريطة محدّثة.",img:""},
  {t:"فتح باب التقديم على الشرطة",d:"2026/10/29",x:"التقديم متاح الآن على جميع أقسام الشرطة لمن يستوفي الشروط.",img:""},
  {t:"إطلاق بوابة التصاريح الإلكترونية",d:"2026/10/28",x:"قدّم على التصاريح والرخص من الموقع وتابع حالة طلبك من حسابك.",img:""},
  {t:"تحديث قوانين المرور",d:"2026/10/27",x:"غرامات جديدة وتراخيص رقمية لجميع المركبات داخل المدينة.",img:""}],
